@@ -1,4 +1,4 @@
-# Sentry-DingDing
+# Sentry-Ones
 
 `Sentry`的`ONES`issus单自动创建插件
 

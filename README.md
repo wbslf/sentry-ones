@@ -16,7 +16,7 @@ $ pip install sentry-ones
 
 ![plugin](https://github.com/wbslf/sentry-ones/blob/main/docs/images/1723800780879.png)
 
-在插件上使用`Test Plugin`进行测试，当配置好相关必填信息后，在自动创建ONES单子
+在插件上使用`Test Plugin`进行测试，当配置好相关必填信息后，会自动创建ONES单子
 
 ![plugin](https://github.com/wbslf/sentry-ones/blob/main/docs/images/1723800915656.jpg) -->
 

@@ -55,14 +55,14 @@ class OnesClient:
     def generate_key(self, length=8):
         return ''.join(random.choices(string.ascii_letters + string.digits, k=length))
     
-    #生成创建ones单的数据
+    #生成创建ones单的数据 assign传入的是负责人id
     def get_task_payload(self,task_uuid, assign, summary, project_uuid,cur_iteration, issue_type_uuid='LpALYBma', desc='',status = 'TEBrcHXs'):
         payload = {
             'tasks': [
                 {
                     'uuid': task_uuid,   #uuid
                     'owner': self.user_uuid,  # 创建人id
-                    'assign': assign,  #负责人id
+                    'assign': self.user_uuid,  #分配人id
                     'summary': summary, # 标题
                     'project_uuid': project_uuid,  # 项目uuid  所属项目
                     'parent_uuid': '',
@@ -83,7 +83,7 @@ class OnesClient:
                        {
                         "field_uuid": "field004",  # 负责人
                         "type": 8,
-                        "value": self.user_uuid  
+                        "value": assign 
                       },
                       {
                         "field_uuid": "field005",  # 状态 默认待开发
@@ -110,10 +110,10 @@ class OnesClient:
                       {
                         "field_uuid": "Wr1TXpRr",  # 验收人  默认负责人  自定义字段
                         "type": 8,
-                        "value": self.user_uuid    
+                        "value": assign   
                       },
                        {
-                        "field_uuid": "34BcpiNu",  # 优化缺陷类型  默认负责人  alert--异常报错
+                        "field_uuid": "34BcpiNu",  # 优化缺陷类型   alert--异常报错
                         "type": 1,
                         "value": 'M2uBThRJ'   
                       },

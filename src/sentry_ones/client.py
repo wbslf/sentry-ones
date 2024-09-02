@@ -326,7 +326,7 @@ class OnesClient:
             'Content-Type': 'application/json'
         }
          
-         old_desc = (task_info['desc_rich']).encode('utf-8')
+         old_desc = (task_info['desc_rich'])
 
          cur_desc = u"{new_desc}\n\n\n{old_desc}".format(new_desc=new_desc, old_desc=old_desc)
 
